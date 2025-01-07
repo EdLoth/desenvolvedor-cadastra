@@ -1,0 +1,38 @@
+/* Estilo para o item do carrinho */
+.cart-item {
+  display: flex; /* Usando Flexbox para disposição horizontal */
+  align-items: center; /* Alinha os itens verticalmente no centro */
+  justify-content: space-between;
+  padding: 8px 0; /* Espaçamento entre os itens */
+  border-bottom: 1px solid #ddd; /* Linha divisória entre os itens */
+}
+
+/* Estilo para a imagem do produto */
+.cart-item__image {
+  width: 50px; /* Tamanho pequeno para a imagem */
+  height: 50px; /* Manter a proporção da imagem */
+  object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
+  border-radius: 4px; /* Bordas arredondadas na imagem */
+  margin-right: 12px; /* Espaçamento entre a imagem e os detalhes */
+}
+
+/* Estilo para os detalhes do produto (nome e preço) */
+.cart-item__details {
+  display: flex;
+  flex-direction: column; /* Empilha o nome e preço em uma coluna */
+  justify-content: center; /* Alinha o conteúdo verticalmente no centro */
+}
+
+/* Estilo para o nome do produto */
+.cart-item__title {
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px; /* Espaçamento entre o nome e o preço */
+}
+
+/* Estilo para o preço do produto */
+.cart-item__price {
+  font-size: 12px;
+  color: #555; /* Cor mais suave para o preço */
+}

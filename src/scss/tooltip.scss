@@ -1,0 +1,112 @@
+/* Estilos principais para o tooltip */
+.cart-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Trigger (Botão do Carrinho) */
+.cart-tooltip__trigger {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+
+
+.remove_product_button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Conteúdo do Tooltip */
+.cart-tooltip__content {
+  display: none;
+  color: black;
+  position: absolute; /* Agora o conteúdo é posicionado em relação ao botão */
+  top: 100%; /* Fica logo abaixo do botão */
+  left: 50%; /* Alinha o conteúdo no centro do botão */
+  transform: translateX(-50%); /* Centraliza o conteúdo horizontalmente */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 16px 0; /* Removido o padding lateral, apenas superior e inferior */
+  width: 300px;
+  z-index: 9999;
+  border-radius: 8px;
+  margin-top: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+
+  h2, ul, div {
+    padding: 0 16px; /* Define o padding esquerdo e direito */
+  }
+}
+
+#cart-quantity {
+  position: absolute;
+  top: 15px;
+  right: -10px;
+  background-color: #FB953E;
+  width: 13px;
+  height: 12px;
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+
+/* Estilos para o cart-list */
+#cart-list {
+  overflow-y: auto;
+  max-height: 260px; /* Limita a altura máxima do carrinho */
+  width: 90%; /* Faz o cart-list ocupar toda a largura disponível */
+  margin: auto;
+}
+
+#cart-total {
+  padding-top: 15px;
+  font-weight: 500;
+}
+
+.total-value{
+  color: #555;
+  font-weight: 600;
+}
+
+/* Estilizando a barra de rolagem */
+#cart-list::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+}
+
+#cart-list::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Cor de fundo da trilha (a parte que fica atrás da barra) */
+  border-radius: 10px;
+}
+
+#cart-list::-webkit-scrollbar-thumb {
+  background: #888; /* Cor do "polegar" da barra de rolagem */
+  border-radius: 10px;
+}
+
+#cart-list::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Cor do "polegar" quando ele é sobrevoado pelo mouse */
+}
+
+#cart-list::-webkit-scrollbar-track:hover {
+  background: #e1e1e1; /* Cor do fundo da trilha ao passar o mouse sobre ela */
+}
+
+/* Quando o tooltip é mostrado */
+.cart-tooltip__content.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s 0s;
+}
